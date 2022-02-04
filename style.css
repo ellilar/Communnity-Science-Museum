@@ -566,7 +566,7 @@ footer {
 		height: 40px;
 	}
 	#hamburger::after {
-		background-image: url(/Images/icon-burger.svg);
+		background-image: url(Images/icon-burger.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: #f2f2f2;
@@ -576,7 +576,7 @@ footer {
 		height: 40px;
 	}
 	#hamburger:checked::after {
-		background-image: url(/Images/icon-cross.svg);
+		background-image: url(Images/icon-cross.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		position: absolute;
