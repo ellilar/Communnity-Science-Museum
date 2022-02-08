@@ -324,7 +324,7 @@ section#break {
 	display: flex;
 	flex-direction: row-reverse;
 	padding: 24px;
-	max-height: 50vw;
+	min-height: 50vh;
 }
 .program-elem-large {
 	display: flex;
@@ -374,8 +374,8 @@ section#break {
 	font-weight: normal;
 	font-size: 18px;
 	padding-top: 12px;
-	max-width: 30vw;
 }
+
 .program-img img {
 	max-width: 100%;
 	height: 100%;
@@ -392,12 +392,12 @@ section#coming-up h2 {
 }
 
 /* MUSEUM */
-
-.grid-elem-half.img-right {
+.grid-elem-half {
 	display: flex;
+	flex-direction: row;
+	min-height: 50vh;
 }
-.grid-elem-half.img-left {
-	display: flex;
+.grid-elem-half.reverse {
 	flex-direction: row-reverse;
 }
 .grid-elem-half > div {
@@ -446,7 +446,7 @@ section#coming-up h2 {
 
 .museum-break {
 	background-image: url(Images/Museum/museum-break.jpg);
-	min-height: 70vw;
+	min-height: 80vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -456,13 +456,13 @@ section#coming-up h2 {
 	color: white;
 	font-weight: lighter;
 	font-size: 50px;
-	width: 50vw;
+	max-width: 500px;
 }
 .break-paragraph {
 	color: white;
 	font-weight: lighter;
 	font-size: 20px;
-	width: 50vw;
+	max-width: 500px;
 }
 
 .info-list p {
@@ -482,16 +482,15 @@ section#coming-up h2 {
 	max-width: 50vw;
 	width: 100%;
 	padding: 48px 0px;
+	margin: auto;
 }
 .newsletter-elem {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
+	margin: auto;
 }
-
 input[type="text"] {
 	width: 50vw;
-	font-family: DM Mono, Courier, monospace;
+	font-family: "DM Mono", Courier, monospace;
 	padding: 12px 24px;
 	font-size: 18px;
 	margin: 8px 0px;
@@ -504,6 +503,7 @@ input[type="submit"] {
 	border: none;
 	margin-top: 24px;
 	width: 50vw;
+	margin: auto;
 }
 
 /* FOOTER */
@@ -551,13 +551,13 @@ footer {
 @media only screen and (max-width: 1200px) {
 	.col-6 {
 		grid-column: span 12;
-		max-height: 70vw;
 	}
 }
 @media only screen and (max-width: 900px) {
 	h2 {
 		padding: 32px;
 	}
+
 	#hamburger {
 		display: block;
 		position: absolute;
@@ -646,22 +646,20 @@ footer {
 	.grid-elem-half .btn {
 		margin: 0 16px;
 	}
-	.image-text {
-		right: 32px;
-		bottom: 32px;
-		font-size: 8px;
-	}
+
 	h3 {
 		padding: 14;
 	}
-
-	.break-heading p {
-		width: 80vw;
+	p.image-text {
+		right: 32px;
+		bottom: 32px;
+		padding: 0;
+		font-size: 8px;
 	}
-	.break-paragraph p {
-		width: 80vw;
+	section#top3 h2 {
+		padding: 0;
+		font-size: 40px;
 	}
-
 	/* FOOTER */
 	footer {
 		background-color: #0000ed;
@@ -700,28 +698,109 @@ footer {
 	.col-4 {
 		grid-column: span 12;
 	}
-	.top3-item img {
-		width: 50%;
+	.col-6 {
+		grid-column: span 12;
 	}
-	h1{
-	font-size: 50px;
-	line-height: ;
+	.top3-item {
+		padding: 16px;
+	}
+	.top3-item img {
+		max-width: 250px;
+	}
+	h1 {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.grid-elem-half {
+		flex-direction: column;
+	}
+	.grid-elem-half.reverse {
+		flex-direction: column;
+	}
+	.grid-elem-half > div {
+		width: 100%;
+		min-height: 50vh;
+	}
+	.program-elem {
+		flex-direction: column-reverse;
+		padding: 16px;
+		min-height: auto;
+	}
+	.program-elem-large {
+		flex-direction: column-reverse;
+		padding: 16px;
+	}
+
+	.program-elem > div,
+	.program-elem-large > div {
+		width: 100%;
+	}
+
+	.program-text,
+	.program-text-large {
+		padding: 16px;
+	}
+
+	.program-info-large {
+		padding-top: 16px;
+	}
+
+	.program-img img {
+		width: 100%;
+		height: 50vw;
+		padding: 16px 0;
+	}
+	.program-img {
+		margin-bottom: 32px;
+	}
+
+	.top3-item h3 {
+		max-width: 250px;
+		width: 100%;
+	}
+	.newsletter {
+		padding: 32px 32px 100px;
+	}
+	.newsletter-elem {
+		max-width: 250px;
+	}
+	.newsletter h3 {
+		font-size: 40px;
+		max-width: 250px;
+	}
+	input[type="text"] {
+		width: 250px;
+	}
+	input[type="submit"] {
+		width: 250px;
 	}
 }
 
 @media only screen and (max-width: 400px) {
-	.top3-item img {
-		width: 100%;
+	section#top3 h2 {
+		padding: 0;
+		font-size: 30px;
+		line-height: 32px;
 	}
-
-	.col-6 {
-		grid-column: span 12;
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
 	}
-	.grid-elem-half.img-right {
-		display: flex;
-		flex-direction: column;
+	.newsletter {
+		padding: 32px 32px 100px;
 	}
-	.grid-elem-half.img-left {
-		display: flex;
-		flex-direction: column-reverse;
+	.newsletter-elem {
+		max-width: 250px;
+	}
+	.newsletter h3 {
+		font-size: 40px;
+		max-width: 250px;
+	}
+	input[type="text"] {
+		width: 250px;
+	}
+	input[type="submit"] {
+		width: 250px;
+	}
 }
