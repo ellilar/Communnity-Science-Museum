@@ -700,6 +700,11 @@ footer {
 		line-height: 60px;
 		letter-spacing: 0;
 	}
+
+	section#hero-homepage h1 {
+		font-size: 50px;
+		line-height: 50px;
+	}
 	h2 {
 		font-size: 40px;
 		line-height: 40px;
@@ -798,6 +803,12 @@ footer {
 		font-size: 50px;
 		line-height: 50px;
 		letter-spacing: 0;
+		margin-bottom: 12px;
+	}
+
+	section#hero-homepage h1 {
+		font-size: 30px;
+		line-height: 30px;
 	}
 	.program-img img {
 		width: 100%;
@@ -806,5 +817,8 @@ footer {
 	}
 	.break-paragraph {
 		font-size: 16px;
+	}
+	.down-btn {
+		bottom: 100px;
 	}
 }
