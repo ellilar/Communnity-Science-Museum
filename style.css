@@ -397,7 +397,6 @@ section#coming-up h2 {
 .grid-elem-half > div {
 	width: 50%;
 }
-
 .grid-text-half {
 	padding: 24px;
 }
@@ -459,6 +458,7 @@ section#coming-up h2 {
 	max-width: 500px;
 }
 
+/* INFO */
 .info-list p {
 	font-size: 20px;
 	line-height: 24px;
@@ -510,6 +510,9 @@ footer {
 	display: flex;
 	align-items: flex-start;
 }
+.footer-text a {
+	color: #d8d8d8;
+}
 .footer-text p {
 	font-size: 12px;
 }
@@ -544,6 +547,9 @@ footer {
 		padding: 32px;
 	}
 
+	h3 {
+		padding: 14;
+	}
 	#hamburger {
 		display: block;
 		position: absolute;
@@ -632,9 +638,6 @@ footer {
 		margin: 0 16px;
 	}
 
-	h3 {
-		padding: 14;
-	}
 	p.image-text {
 		right: 32px;
 		bottom: 32px;
@@ -794,16 +797,16 @@ footer {
 }
 
 @media only screen and (max-width: 400px) {
-	section#top3 h2 {
-		padding: 0;
-		font-size: 30px;
-		line-height: 32px;
-	}
 	h1 {
 		font-size: 50px;
 		line-height: 50px;
 		letter-spacing: 0;
 		margin-bottom: 12px;
+	}
+	section#top3 h2 {
+		padding: 0;
+		font-size: 30px;
+		line-height: 32px;
 	}
 
 	section#hero-homepage h1 {
